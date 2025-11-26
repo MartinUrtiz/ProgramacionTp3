@@ -1,44 +1,27 @@
-# Explicación: Arrays vs Listas Enlazadas
+¿Cuándo usar una Pila?
+Situación	Motivo
+Deshacer acciones	Último cambio es el primero en revertirse
+Historial	Mantiene orden cronológico inverso
+Recorrido recursivo	La pila modela el stack
+¿Cuándo usar una Cola?
+Situación	Motivo
+Turnos	Respeta orden de llegada (FIFO)
+Procesos en espera	Evita injusticias
+Sistemas de atención	Comportamiento realista
+¿Por qué implementar Pilas y Colas con Listas Enlazadas?
+Ventaja	Explicación
+No tienen límite fijo	A diferencia de array, no requiere tamaño
+Inserciones O(1)	Insertar al inicio o final es constante
+Evita desperdicio de memoria	No hay espacios vacíos
+Desventajas vs Arrays
 
-## Diferencias entre trabajar con **arrays** y **listas enlazadas**
+Más punteros → más memoria por nodo
 
-### 1. Estructura interna
-- **Arrays:** Estructura contigua en memoria.
-- **Listas enlazadas:** Cada nodo está en memoria separada y apunta al siguiente.
+Acceso aleatorio no permitido (no puedo acceder a cola[5])
 
-### 2. Acceso a los elementos
-- **Arrays:** Acceso directo 
-- **Listas enlazadas:** Acceso secuencial 
+----------------------------------------
+Métodos Recursivos incluidos
 
-### 3. Tamaño
-- **Arrays:** Tamaño fijo.
-- **Listas enlazadas:** Tamaño dinámico.
-
-### 4. Inserción y eliminación
-- **Arrays:** Insertar o borrar implica mover elementos 
-- **Listas enlazadas:** Solo se cambian punteros 
-
-### 5. Uso de memoria
-- **Arrays:** Guardan únicamente los datos.
-- **Listas enlazadas:** Cada nodo almacena datos + puntero.
-
----
-
-## Ventajas y desventajas de usar **listas enlazadas**
-
-### Ventajas
-1. **Tamaño dinámico.**
-2. **Inserciones y eliminaciones eficientes.**
-3. **Estructura flexible** para representar relaciones dinámicas.
-
-### Desventajas
-1. **Acceso lento por posición.**
-2. **Mayor uso de memoria.**
-3. **Menor localidad espacial**, menos eficiente en cache.
-4. **Recorridos más costosos** si se necesita acceder constantemente.
-
----
-
-## Conclusión
-- Si el programa modifica mucho la estructura → **lista enlazada** es recomendable.
-- Si se requiere acceso rápido por índice o recorridos frecuentes → **array** es mejor opción.
+Contar elementos en una cola
+Imprimir una pila restaurándola
+Se puede agregar un tercero si querés (vaciar Pila, por ejemplo)
